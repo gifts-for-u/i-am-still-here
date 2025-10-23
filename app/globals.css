@@ -59,12 +59,13 @@ body {
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
-  pointer-events: none;
+  pointer-events: auto;
   padding: clamp(16px, 4vmin, 28px);
   z-index: 2;
 }
 
 .intro__title {
+  font-family: var(--font-family);
   font-size: clamp(2rem, 5vw, 3rem);
   letter-spacing: 0.04em;
   font-weight: 600;

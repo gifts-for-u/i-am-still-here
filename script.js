@@ -1,7 +1,14 @@
 const MESSAGES = [
-  'Ini pesan dummy 1. Nanti kamu ganti sendiri ya. 💗',
-  'Ini pesan dummy 2. Kamu bisa nambah sebanyak yang kamu mau.',
-  'Ini pesan dummy 3. Tetap semangat ya sayang.'
+  'Halo sayang akuu, ini aku lagii hehehe, jangan bosen bosen yaa bacanyaa, mwaaa',
+  'Mungkin minggu ini adalah minggu yang cukup berat buat kamu, sampe bener-bener nguras tenaga dan pikiran kamu..',
+  'Semua itu bisa aku liat dari ekspresi kamu waktu kita call, lalu juga dari cara kamu bales chat aku, kamu bener-bener cape yaa..',
+  'Mungkin rasa bosen yang waktu itu kamu bilang ke aku masih ada, tapi gapapa aku ngerti emang lagi monoton aja, dan itu wajar ko sayang kalo kamu ngerasa bosen, tapi jangan berantem pliss..',
+  'Aku juga ngerasa emang lagi flat aja hubungan kita, tapi namanya hubungan ada di atas, ada di bawah, ada pas datar aja.. ini fase sayangg.. ini pasti lewat koo',
+  'Tapi aku mau kita ngobrol banyaa, banyaa bangett ngebahas apa ajaa, terutama ngebahas hari-hari kamuu, aku pengen tau cerita dari kamuu sayangg',
+  'Aku juga berharap nanti pas ke private room bonding kita jadi makin kuat, makin deket, kita bisa sayang-sayangan lagi, makin-makin malah aku maunya hehehe, itu bisa jadi momen kitaa nanti sayangg',
+  'Pliss yaa sayang kalo ada apa-apa cerita sama aku, kalo butuh apa-apa bilang ke aku, pokonya bilang ke akuu. Nanti aku juga gitu ke kamuuu',
+  "Aku disini sayang, i'm still here, always been here for u",
+  'I love u very much, in this timeline, in this unieverse, in every universe😘❣️'
 ];
 
 const INTRO_IN_DURATION = 2000;
