@@ -1,5 +1,13 @@
 import type { Metadata } from 'next';
+import { Figtree } from 'next/font/google';
 import './globals.css';
+
+const figtree = Figtree({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700', '800', '900'],
+  style: ['normal', 'italic'],
+  display: 'swap'
+});
 
 export const metadata: Metadata = {
   title: 'Halo Cantik Aku',
@@ -13,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="id">
-      <body>{children}</body>
+      <body className={figtree.className}>{children}</body>
     </html>
   );
 }

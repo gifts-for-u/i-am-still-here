@@ -167,7 +167,7 @@ function spawnHearts() {
 
     const size = getRandomInt(minSize, maxSize);
     const baseLifetime = getRandomInt(1200, 2200);
-    const lifetime = prefersReducedMotion.matches ? Math.min(baseLifetime, 800) : baseLifetime;
+    const lifetime = prefersReducedMotion.matches ? Math.min(baseLifetime, 400) : baseLifetime;
     const rotation = getRandomInt(-25, 25);
 
     let position = null;
@@ -204,23 +204,17 @@ function spawnHearts() {
     heart.style.left = `${position.x}px`;
     heart.style.top = `${position.y}px`;
     heart.style.color = '#ff8fb3';
-    heart.style.animation = `float-up-fade ${lifetime}ms cubic-bezier(0.22, 1, 0.36, 1) forwards`;
-    heart.style.transform = `rotate(${rotation}deg)`;
-
-    heartsLayer.appendChild(heart);
-
-    const removeHeart = () => {
-      heart.removeEventListener('animationend', removeHeart);
-      heart.remove();
-    };
+    heart.style.setProperty('--heart-rotation', `${rotation}deg`);
 
     if (prefersReducedMotion.matches) {
-      setTimeout(() => {
-        removeHeart();
-      }, Math.min(lifetime, 400));
+      heart.style.animation = 'none';
+      heart.style.opacity = '1';
+      heart.style.transform = `translateY(0) scale(1) rotate(${rotation}deg)`;
     } else {
-      heart.addEventListener('animationend', removeHeart, { once: true });
+      heart.style.animation = `float-up-fade ${lifetime}ms cubic-bezier(0.22, 1, 0.36, 1) forwards`;
     }
+
+    heartsLayer.appendChild(heart);
   }
 }
 

@@ -64,10 +64,6 @@ export default function Page() {
     animateWithClass(introTitleRef.current, 'fade-in', reducedMotion);
   }, [reducedMotion]);
 
-  const removeHeart = useCallback((id: number) => {
-    setHearts((prev) => prev.filter((heart) => heart.id !== id));
-  }, []);
-
   const updateProgress = useCallback((index: number) => {
     const percent = computeProgress(index, MESSAGES.length);
     if (progressFillRef.current) {
@@ -235,12 +231,7 @@ export default function Page() {
 
       <div ref={heartsLayerRef} className="hearts" aria-hidden="true">
         {hearts.map((heart) => (
-          <Heart
-            key={heart.id}
-            heart={heart}
-            reducedMotion={reducedMotion}
-            onComplete={removeHeart}
-          />
+          <Heart key={heart.id} heart={heart} reducedMotion={reducedMotion} />
         ))}
       </div>
 
