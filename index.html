@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Halo Cantik Aku</title>
+    <link rel="preload" href="heart.svg" as="image" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="stage" role="main">
+      <section class="intro" aria-live="polite">
+        <h1 class="intro__title" data-role="intro-title">halo cantik aku</h1>
+        <p class="intro__hint">tap layarnya buat lanjut sayang</p>
+      </section>
+      <section
+        class="message-area"
+        aria-live="polite"
+        aria-atomic="true"
+        data-role="message-area"
+      >
+        <p class="message" data-role="message-text"></p>
+      </section>
+      <div class="hearts" aria-hidden="true" data-role="hearts-layer"></div>
+      <div class="progress" role="progressbar" aria-label="Progres pesan" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <span class="progress__track"></span>
+        <span class="progress__fill" data-role="progress-fill"></span>
+      </div>
+    </main>
+    <script src="script.js" type="module" defer></script>
+  </body>
+</html>
